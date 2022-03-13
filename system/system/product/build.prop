@@ -1,0 +1,8 @@
+
+#
+# ADDITIONAL PRODUCT PROPERTIES
+#
+ro.build.characteristics=default
+ro.config.notification_sound=Chime.ogg
+ro.config.alarm_alert=Argon.ogg
+ro.config.ringtone=Orion.ogg
