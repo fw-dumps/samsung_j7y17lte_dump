@@ -1,0 +1,37 @@
+#line 1 "device/samsung/universal7870-common/sepolicy/property_contexts"
+# bluetooth
+persist.bluetooth_fw_ver    u:object_r:bluetooth_prop:s0
+ro.bluetooth.tty            u:object_r:bluetooth_prop:s0
+wc_transport.               u:object_r:bluetooth_prop:s0
+
+# modemloader
+hw.revision            u:object_r:modemloader_prop:s0
+ro.cbd.dt_revision     u:object_r:modemloader_prop:s0
+ril.cbd.dt_revision    u:object_r:modemloader_prop:s0
+ro.modemloader.done    u:object_r:modemloader_prop:s0
+
+# mobicore
+sys.mobicoredaemon.enable         u:object_r:tee_prop:s0
+
+# radio
+persist.ril.modem.board    u:object_r:radio_prop:s0
+persist.ril.ims.eutranParam u:object_r:radio_prop:s0
+persist.ril.ims.utranParam  u:object_r:radio_prop:s0
+persist.ril.interfaceconf.failed u:object_r:radio_prop:s0
+
+# sswap
+persist.sys.swapoff     u:object_r:sswap_prop:s0
+#line 1 "device/lineage/sepolicy/common/dynamic/property_contexts"
+# Aux camera blacklist prop readable to everything
+vendor.camera.aux.packageblacklist     u:object_r:exported_default_prop:s0
+#line 1 "device/lineage/sepolicy/common/vendor/property_contexts"
+# Aux camera whitelist prop readable to everything
+vendor.camera.aux.packagelist          u:object_r:exported_default_prop:s0
+vendor.camera.hal1.packagelist         u:object_r:exported_default_prop:s0
+
+# Faceunlock prop
+ro.vendor.sensors.mot_ltv              u:object_r:exported_default_prop:s0
+#line 1 "system/sepolicy/reqd_mask/property_contexts"
+# empty property_contexts file - this file is used to generate an empty
+# non-platform property context for devices without any property_contexts
+# customizations.
